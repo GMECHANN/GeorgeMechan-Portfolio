@@ -10,6 +10,7 @@ interface ProjectDefinition {
   cover: string;
   screenshots: string[];
   presentation: string[];
+  featuredMedia: 'cover' | 'screens';
   visualType: 'phone' | 'browser';
   github: string;
   demo: string;
@@ -32,6 +33,7 @@ const projectDefinitions: ProjectDefinition[] = [
       asset('/projects/studyflow/presentation/ocr-result.webp'),
       asset('/projects/studyflow/presentation/profile.webp'),
     ],
+    featuredMedia: 'cover',
     visualType: 'phone',
     github: '',
     demo: '',
@@ -51,8 +53,29 @@ const projectDefinitions: ProjectDefinition[] = [
       asset('/projects/pronosticos/screenshots/match-analysis.webp'),
       asset('/projects/pronosticos/screenshots/results-overview.webp'),
     ],
+    featuredMedia: 'cover',
     visualType: 'browser',
     github: '',
+    demo: '',
+  },
+  {
+    slug: 'web-data-extractor',
+    title: 'Web Data Extractor',
+    technologies: ['Python', 'Streamlit', 'BeautifulSoup', 'Pandas', 'OpenPyXL', 'HTML/CSS', 'Git', 'GitHub'],
+    cover: asset('/projects/web-data-extractor/cover.png'),
+    screenshots: [
+      asset('/projects/web-data-extractor/screenshots/main-interface.png'),
+      asset('/projects/web-data-extractor/screenshots/website-analysis.png'),
+      asset('/projects/web-data-extractor/screenshots/extraction-results.png'),
+    ],
+    presentation: [
+      asset('/projects/web-data-extractor/screenshots/main-interface.png'),
+      asset('/projects/web-data-extractor/screenshots/website-analysis.png'),
+      asset('/projects/web-data-extractor/screenshots/extraction-results.png'),
+    ],
+    featuredMedia: 'screens',
+    visualType: 'browser',
+    github: 'https://github.com/GMECHANN/WebDataExtractor',
     demo: '',
   },
 ];

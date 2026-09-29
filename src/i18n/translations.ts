@@ -1,5 +1,5 @@
 export type Language = 'en' | 'es';
-export type ProjectSlug = 'studyflow' | 'pronosticos-ia';
+export type ProjectSlug = 'studyflow' | 'pronosticos-ia' | 'web-data-extractor';
 
 const en = {
   meta: {
@@ -69,7 +69,7 @@ const en = {
   projectsSection: {
     eyebrow: 'Selected work',
     title: 'Products, not just pages.',
-    description: 'Two systems that connect interface design with application logic, data and purposeful workflows.',
+    description: 'Systems that connect interface design with application logic, data and purposeful workflows.',
     projectLabel: 'PROJECT',
     exploreCaseStudy: 'Explore case study',
   },
@@ -120,6 +120,31 @@ const en = {
         { id: 'data-pipeline', title: 'Data Pipeline', body: 'External data is collected, parsed with Python, normalized through JSON-based processing and prepared for the statistical and machine-learning layers.' },
         { id: 'prediction-system', title: 'Prediction System', body: 'Processed historical signals feed statistical and machine-learning models. Their outputs are organized into understandable match views without presenting unsupported accuracy claims.' },
         { id: 'technical-challenges', title: 'Technical Challenges', body: 'The work centers on inconsistent source data, transformation rules, reusable competition pipelines and presenting many signals without overwhelming the user.' },
+      ],
+    },
+    'web-data-extractor': {
+      eyebrow: 'Python · Web Scraping · Data Automation',
+      category: 'Python / Web Scraping / Data Automation',
+      shortDescription: 'A Streamlit application for responsible web scraping, structured data extraction, cleaning and CSV, Excel or JSON export.',
+      description: 'A Python web scraping application for extracting structured data from publicly accessible websites. It supports HTML table detection, custom CSS selectors, multi-page pagination, data cleaning, relative link resolution, and export to CSV, Excel, and JSON. The application includes a responsive Streamlit interface and configurable request limits for responsible data extraction.',
+      features: ['Website analysis', 'Custom CSS selectors', 'HTML table extraction', 'Multi-page pagination', 'Data cleaning', 'CSV export', 'Excel export', 'JSON export', 'HTTP/error handling', 'Configurable request delays'],
+      screenshots: [
+        { alt: 'Real Web Data Extractor main interface', label: 'Main interface' },
+        { alt: 'Real Web Data Extractor website analysis and CSS selector configuration', label: 'Website analysis / CSS selector' },
+        { alt: 'Real Web Data Extractor results showing 60 rows, 4 columns and 3 pages', label: 'Extraction results' },
+      ],
+      presentation: [
+        { alt: 'Real Web Data Extractor main interface presented in a browser frame', label: 'Main interface' },
+        { alt: 'Real Web Data Extractor website analysis presented in a browser frame', label: 'Website analysis' },
+        { alt: 'Real Web Data Extractor extraction results presented in a browser frame', label: 'Extraction results' },
+      ],
+      pipeline: ['Public website', 'HTTP request', 'HTML parsing', 'CSS / table extraction', 'Data cleaning', 'Pagination', 'CSV / Excel / JSON'],
+      sections: [
+        { id: 'problem', title: 'Problem', body: 'Publicly accessible websites often present useful information in repeated elements or HTML tables that is difficult to reuse and organize manually.' },
+        { id: 'solution', title: 'Solution', body: 'Web Data Extractor provides a guided Streamlit interface for analyzing a public website, selecting an extraction method, cleaning the collected information and exporting a structured dataset.' },
+        { id: 'data-pipeline', title: 'Extraction Workflow', body: 'The workflow supports detected HTML tables or custom CSS selectors, relative link resolution and multi-page pagination before preparing the results for CSV, Excel or JSON export.' },
+        { id: 'responsible-extraction', title: 'Responsible Extraction', body: 'Configurable request limits, delays and HTTP error handling keep the extraction process controlled and focused on publicly accessible HTML.' },
+        { id: 'technical-architecture', title: 'Technical Architecture', body: 'Python coordinates requests and extraction, BeautifulSoup parses HTML, Pandas structures and cleans the data, OpenPyXL supports Excel export, and Streamlit provides the responsive web interface.' },
       ],
     },
   },
@@ -220,6 +245,7 @@ const en = {
   caseStudy: {
     backToProjects: 'Back to projects',
     sourceCode: 'Source code',
+    viewOnGitHub: 'View on GitHub',
     liveDemo: 'Live demo',
     caseStudy: 'Case study',
     overview: 'Overview',
@@ -237,7 +263,7 @@ const en = {
     viewFullScreen: 'View full screen',
     screenshotComingSoon: 'Real screenshot coming soon',
     nextProject: 'Next project',
-    realInterfacePath: 'pronosticos-ia / real interface',
+    realInterfacePath: '{slug} / real interface',
   },
   footer: {
     disciplines: 'Web · Android · Python · APIs · Data',
@@ -323,7 +349,7 @@ const es = {
   projectsSection: {
     eyebrow: 'Proyectos seleccionados',
     title: 'Productos, no solo páginas.',
-    description: 'Dos sistemas que conectan el diseño de interfaces con lógica de aplicación, datos y flujos de trabajo con propósito.',
+    description: 'Sistemas que conectan el diseño de interfaces con lógica de aplicación, datos y flujos de trabajo con propósito.',
     projectLabel: 'PROYECTO',
     exploreCaseStudy: 'Explorar caso de estudio',
   },
@@ -374,6 +400,31 @@ const es = {
         { id: 'data-pipeline', title: 'Flujo de Datos', body: 'Los datos externos se recopilan, se procesan con Python, se normalizan mediante un flujo basado en JSON y se preparan para las capas estadísticas y de Machine Learning.' },
         { id: 'prediction-system', title: 'Sistema de Pronósticos', body: 'Las señales históricas procesadas alimentan modelos estadísticos y de Machine Learning. Sus resultados se organizan en vistas comprensibles para cada partido, sin presentar afirmaciones de precisión no sustentadas.' },
         { id: 'technical-challenges', title: 'Desafíos Técnicos', body: 'El trabajo se centra en datos de origen inconsistentes, reglas de transformación, flujos reutilizables entre competiciones y la presentación de múltiples señales sin sobrecargar al usuario.' },
+      ],
+    },
+    'web-data-extractor': {
+      eyebrow: 'Python · Web Scraping · Automatización de Datos',
+      category: 'Python / Web Scraping / Automatización de Datos',
+      shortDescription: 'Una aplicación en Streamlit para web scraping responsable, extracción y limpieza de datos estructurados, y exportación a CSV, Excel o JSON.',
+      description: 'Aplicación desarrollada en Python para extraer y organizar datos estructurados de sitios web públicos. Permite detectar tablas HTML, utilizar selectores CSS personalizados, procesar múltiples páginas mediante paginación, limpiar datos, resolver enlaces relativos y exportar los resultados a CSV, Excel y JSON. Incluye una interfaz en Streamlit y límites configurables para realizar extracciones responsables.',
+      features: ['Análisis de sitios web', 'Selectores CSS personalizados', 'Extracción de tablas HTML', 'Paginación de múltiples páginas', 'Limpieza de datos', 'Exportación a CSV', 'Exportación a Excel', 'Exportación a JSON', 'Manejo de errores HTTP', 'Pausas configurables entre solicitudes'],
+      screenshots: [
+        { alt: 'Interfaz principal real de Web Data Extractor', label: 'Interfaz principal' },
+        { alt: 'Análisis de sitio web y configuración de selector CSS reales de Web Data Extractor', label: 'Análisis web / selector CSS' },
+        { alt: 'Resultados reales de Web Data Extractor con 60 filas, 4 columnas y 3 páginas', label: 'Resultados de extracción' },
+      ],
+      presentation: [
+        { alt: 'Interfaz principal real de Web Data Extractor presentada en un marco de navegador', label: 'Interfaz principal' },
+        { alt: 'Análisis real de sitio web de Web Data Extractor presentado en un marco de navegador', label: 'Análisis del sitio web' },
+        { alt: 'Resultados reales de extracción de Web Data Extractor presentados en un marco de navegador', label: 'Resultados de extracción' },
+      ],
+      pipeline: ['Sitio web público', 'Solicitud HTTP', 'Análisis de HTML', 'Extracción CSS / tablas', 'Limpieza de datos', 'Paginación', 'CSV / Excel / JSON'],
+      sections: [
+        { id: 'problem', title: 'Problema', body: 'Los sitios web de acceso público suelen presentar información útil en elementos repetidos o tablas HTML que resulta difícil reutilizar y organizar manualmente.' },
+        { id: 'solution', title: 'Solución', body: 'Web Data Extractor ofrece una interfaz guiada en Streamlit para analizar un sitio web público, elegir un método de extracción, limpiar la información recopilada y exportar un conjunto de datos estructurado.' },
+        { id: 'data-pipeline', title: 'Flujo de Extracción', body: 'El flujo admite tablas HTML detectadas o selectores CSS personalizados, resolución de enlaces relativos y paginación de múltiples páginas antes de preparar los resultados para exportarlos a CSV, Excel o JSON.' },
+        { id: 'responsible-extraction', title: 'Extracción Responsable', body: 'Los límites y pausas configurables entre solicitudes, junto con el manejo de errores HTTP, mantienen el proceso de extracción controlado y enfocado en HTML de acceso público.' },
+        { id: 'technical-architecture', title: 'Arquitectura Técnica', body: 'Python coordina las solicitudes y la extracción, BeautifulSoup procesa el HTML, Pandas estructura y limpia los datos, OpenPyXL permite exportar a Excel y Streamlit proporciona la interfaz web responsive.' },
       ],
     },
   },
@@ -474,6 +525,7 @@ const es = {
   caseStudy: {
     backToProjects: 'Volver a proyectos',
     sourceCode: 'Código fuente',
+    viewOnGitHub: 'Ver en GitHub',
     liveDemo: 'Demo en vivo',
     caseStudy: 'Caso de estudio',
     overview: 'Resumen',
@@ -491,7 +543,7 @@ const es = {
     viewFullScreen: 'Ver pantalla completa',
     screenshotComingSoon: 'Captura real próximamente',
     nextProject: 'Siguiente proyecto',
-    realInterfacePath: 'pronosticos-ia / interfaz real',
+    realInterfacePath: '{slug} / interfaz real',
   },
   footer: {
     disciplines: 'Web · Android · Python · APIs · Datos',

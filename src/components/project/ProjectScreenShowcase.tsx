@@ -2,14 +2,16 @@ import type { ProjectScreenshot } from '../../types';
 import { ProjectImage } from '../ui/ProjectImage';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { interpolate } from '../../i18n/translations';
+import { BrowserScreenStage } from './BrowserScreenStage';
 
 interface ProjectScreenShowcaseProps {
   projectTitle: string;
+  projectSlug: string;
   images: ProjectScreenshot[];
   visualType: 'phone' | 'browser';
 }
 
-export function ProjectScreenShowcase({ projectTitle, images, visualType }: ProjectScreenShowcaseProps) {
+export function ProjectScreenShowcase({ projectTitle, projectSlug, images, visualType }: ProjectScreenShowcaseProps) {
   const { copy } = useLanguage();
   const section = copy.caseStudy;
   return (
@@ -27,17 +29,7 @@ export function ProjectScreenShowcase({ projectTitle, images, visualType }: Proj
           ))}
         </div>
       ) : (
-        <div className="browser-stage" aria-label={interpolate(copy.a11y.realScreens, { title: projectTitle })}>
-          {images.map((image) => (
-            <figure className="browser-shot" key={image.src}>
-              <div className="browser-frame">
-                <div className="browser-chrome" aria-hidden="true"><i /><i /><i /><span>{section.realInterfacePath}</span></div>
-                <ProjectImage src={image.src} alt={image.alt} loading="eager" />
-              </div>
-              <figcaption>{image.label}</figcaption>
-            </figure>
-          ))}
-        </div>
+        <BrowserScreenStage projectTitle={projectTitle} projectSlug={projectSlug} images={images} />
       )}
     </section>
   );

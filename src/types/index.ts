@@ -14,6 +14,7 @@ export interface Project {
   cover: string;
   screenshots: ProjectScreenshot[];
   presentation?: ProjectScreenshot[];
+  featuredMedia: 'cover' | 'screens';
   visualType: 'phone' | 'browser';
   sections: ProjectSection[];
   pipeline?: string[];
