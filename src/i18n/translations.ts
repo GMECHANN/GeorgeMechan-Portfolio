@@ -3,8 +3,8 @@ export type ProjectSlug = 'studyflow' | 'pronosticos-ia' | 'web-data-extractor';
 
 const en = {
   meta: {
-    homeTitle: 'George Mechan | Software Developer',
-    homeDescription: 'Portfolio of George Mechan, software developer focused on web development, Android, Python, APIs, data processing and automation.',
+    homeTitle: 'George Mechan | Software Developer Portfolio',
+    homeDescription: 'Software Developer portfolio featuring Python, Android, React, APIs, automation and data projects.',
     notFoundTitle: 'Page not found | George Mechan',
   },
   a11y: {
